@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>OBJ Viewer</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"      
+    </canvas>
+
+  <div>
+    <button id="turnLeftBtn" type="button"">Turn left</button>
+    <button id="turnRightBtn" type="button"">Turn right</button>
+    <button id="turnUpBtn" type="button"">Turn up</button>
+    <button id="turnDownBtn" type="button"">Turn down</button>
+  </div>
+  <div>
+    <button id="zoomInBtn" type="button"">Zoom in</button>
+    <button id="zoomOutBtn" type="button"">Zoom out</button>
+    <button id="rotation-toggle" type="button"">Pause Rotation</button>
+  </div>
+  <div>
+    <B>Texture Coordinate</B>
+    <button id="repeat-toggle" type="button"">Repeat</button>
+    <button id="mirrored-repeat-toggle" type="button"">Mirrored Repeat</button>
+    <button id="clamp-to-edge-toggle" type="button"">Clamp To Edge</button>
+  </div>
+  <div>
+    <button id="linear-toggle" type="button"">Linear Toggle</button>
+    <button id="nearest-toggle" type="button"">Nearest Toggle</button>
+  </div>
+  <div>
+    <button id="mip-map-toggle" type="button"">Mip Map Toggle</button>
+  </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/cs411-common.js"></script>
+    <script src="lib/obj-loader.js"></script>
+    <script src="cs411-assignment7-template.js"></script>
+  </body>
+</html>

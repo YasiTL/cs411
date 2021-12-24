@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>OBJ Viewer</title>
+  </head>
+
+  <body onload="main()">
+    <div style="display:flex;">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"      
+    </canvas>
+  <div class="put_shit_here">
+  <div style="margin-bottom: 10px;">
+    <b>Orientation</b>
+    <button id="turnLeftBtn" type="button"">Turn left</button>
+    <button id="turnRightBtn" type="button"">Turn right</button>
+    <button id="turnUpBtn" type="button"">Turn up</button>
+    <button id="turnDownBtn" type="button"">Turn down</button>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <b>Zooming</b>
+    <button id="zoomInBtn" type="button"">Zoom in</button>
+    <button id="zoomOutBtn" type="button"">Zoom out</button>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <b>** MUST INVERT NORMALS FIRST</b>
+    <button id="invertNormalsBtn" type="button"">Invert normals</button>
+  </div>
+  <div style="display: flex; margin-bottom: 10px;">
+    <b>Position (x,y,z)</b>
+    <input id="x-light-position" type="number" step="0.5" value="-0.35">,</input>
+    <input id="y-light-position" type="number" step="0.5" value="0.35">,</input>
+    <input id="z-light-position" type="number" step="0.5" value="0.87"></input>
+  </div>
+  <b>Attenuation (k(d) = 1/kc + kl*d + kq*d^2):</b>
+  <div style="display: flex; margin-bottom: 10px;">
+    kc=<input id="k_constant-input" type="number" value="1"></input>
+    kf=<input id="k_linear-input" type="number" value="1"></input>
+    kq=<input id="k_quadratic-input" type="number" value="1"></input>
+  </div>
+
+  <br>
+  <div> Ambiant light intensity: <input id="ambient-intensity-input" type="number" step="0.1" value="1"></input> </div>
+  <div> Material Property for Ambiant Light: <input id="material-ambient-input" type="number" step="0.5" value="0.5"></input> </div>
+
+  <br>
+  <div> Specular light intensity: <input id="specular-intensity-input" type="number" step="0.1" value="1"></input> </div>
+  <div> Material Property for Specular Light: <input id="material-specular-input" type="number" step="0.5" value="0.5"></input> </div>
+  <div> Highlight Size paramater for specular light: <input id="highlight-size-input" type="number" step="0.01" value="1.5"></input> </div>
+
+  <br>
+  <div> Diffuse light intensity: <input id="diffuse-intensity-input" type="number" step="0.5" value="1"></input> </div>
+  <div> Material property for diffuse light: <input id="material-diffuse-input" type="number" step="0.5" value="0.5"></input></div>
+</div>
+  </div>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/cs411-common.js"></script>
+    <script src="lib/obj-loader.js"></script>
+    <script src="cs411-assignment6.js"></script>
+  </body>
+</html>
